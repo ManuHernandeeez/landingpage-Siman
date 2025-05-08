@@ -344,3 +344,259 @@ footer {
         text-align: center;
     }
 }
+
+
+
+
+.verano {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.verano .card {
+    width: 50%;           /* Ocupa el 50% del contenedor */
+    max-width: 400px;      /* Limite máximo si se desea */
+    aspect-ratio: 1 / 1;   /* Asegura una relación 1:1 para ser cuadrada */
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.verano .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.verano .card .card-title {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.1em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+/*pages descuentos*/
+
+
+/* Sección creativa de electrodomésticos */
+.electro-ofertas {
+    margin: 40px auto;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.electro-ofertas h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+    color: #a83338;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+.electro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+.electro-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(168,51,56,0.08);
+    padding: 18px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.electro-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(168,51,56,0.15);
+}
+
+.electro-card img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #f1f1f1;
+    background: #fafafa;
+}
+
+.electro-card span {
+    font-family: 'Montserrat';
+    font-weight: 1000px;
+    color: #a83338;
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+@media (max-width: 900px) {
+    .electro-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .electro-grid {
+        grid-template-columns: 1fr;
+    }
+    .electro-card img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+/*Ofertas dia de la madre*/
+
+/* Carrusel de imágenes cuadradas */
+/* Grid especial para ofertas día de la madre */
+.madres-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 10px;
+}
+
+.madres-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(168,51,56,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.madres-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+}
+
+.madres-card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #a83338;
+    font-size: 1.1em;
+    padding: 12px 0;
+    text-align: center;
+}
+
+.madres-card.grande {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.madres-card.mediana {
+    /* Ocupa 1x1 celda */
+}
+
+/* Grid para sección de cuidado personal */
+.cuidado-personal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 10px;
+}
+
+.cuidado-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(168,51,56,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cuidado-card img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+}
+
+.cuidado-card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #a83338;
+    font-size: 1.1em;
+    padding: 12px 0;
+    text-align: center;
+}
+
+
+/* Carrusel centrado al 50% de la página */
+.carrusel-centro {
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel-centro .carousel-inner img {
+    border-radius: 16px;
+    object-fit: cover;
+    width: 100%;
+    height: 600px;
+}
+
+
+
+
+/*Acerca de*/
+
+/* Descripción personalizada para la página Acerca de */
+.siman-descripcion {
+    max-width: 700px;
+    margin: 32px auto 40px auto;
+    background: #fff8f8;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(168,51,56,0.07);
+    padding: 32px 28px;
+    font-family: 'Montserrat', 'Open Sans', Arial, sans-serif;
+    font-size: 1.15em;
+    color: #6a2c2c;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.siman-descripcion p {
+    margin-bottom: 18px;
+}
+
+.text{  
+
+   
+    text-align: center;
+}
